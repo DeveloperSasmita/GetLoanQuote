@@ -88,7 +88,6 @@ class QuoteProviderServiceImpl implements QuoteProviderService {
 
     public BigDecimal calculateMonthlyRepayment(Quote quote) {
 
-        //TODO Calculation
         return new BigDecimal(quote.getRate() * quote.getAmount() / 12 / (1 - Math.pow((quote.getRate() / 12 + 1), (-getTotalPaymentsMonths()))));
       //  return (new BigDecimal(quote.getRate()).multiply(new BigDecimal(quote.getAmount())) .divide(new BigDecimal(12)).divide((BigDecimal.ONE.subtract (new BigDecimal(quote.getRate()).divide(new BigDecimal(12)).add(BigDecimal.ONE) ).pow (getTotalPaymentsMonths()))));
 
