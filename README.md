@@ -34,7 +34,7 @@ Java : 11 , Junit5 , Springboot:2.5.3
 2. Sample LenderData.csv file is at src\test\resources\
 
 If run using JAR (Optional port)                                                        
-`java -jar target/quote-0.0.1-SNAPSHOT.jar --server.port=8080`
+`java -jar target/quote-0.0.1-SNAPSHOT.jar --server.port=8080`                                         
 Property can be passed in the command line to override the configuration provided in
 the [configuration](src/main/resources/application.properties) 
 
