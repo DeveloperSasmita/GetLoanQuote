@@ -1,4 +1,4 @@
-package zopa.quote.model;
+package com.getquote.model;
 
 import com.opencsv.bean.CsvBindByPosition;
 import lombok.Data;

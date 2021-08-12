@@ -1,16 +1,16 @@
-package zopa.quote.serviceImpl;
+package com.getquote.serviceImpl;
 
+import com.getquote.exceptions.FundsNotAvailable;
+import com.getquote.model.Offer;
+import com.getquote.model.Quote;
+import com.getquote.service.FundsService;
+import com.getquote.service.QuoteProviderService;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
-import zopa.quote.exceptions.FundsNotAvailable;
-import zopa.quote.model.Offer;
-import zopa.quote.model.Quote;
-import zopa.quote.service.FundsService;
-import zopa.quote.service.QuoteProviderService;
 
 import java.math.BigDecimal;
 import java.util.Optional;

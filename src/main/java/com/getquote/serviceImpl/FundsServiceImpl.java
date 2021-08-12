@@ -1,17 +1,15 @@
-package zopa.quote.serviceImpl;
+package com.getquote.serviceImpl;
 
+import com.getquote.exceptions.FundsNotAvailable;
+import com.getquote.model.Offer;
+import com.getquote.service.FundsService;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
-import zopa.quote.exceptions.FundsNotAvailable;
-import zopa.quote.model.Offer;
-import zopa.quote.service.FundsService;
-import zopa.quote.util.CSVUtility;
+import com.getquote.util.CSVUtility;
 
 import javax.annotation.PostConstruct;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;

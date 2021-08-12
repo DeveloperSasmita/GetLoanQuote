@@ -1,6 +1,6 @@
-package zopa.quote.service;
+package com.getquote.service;
 
-import zopa.quote.exceptions.InvalidRequestAmount;
+import com.getquote.exceptions.InvalidRequestAmount;
 
 public interface AmountValidationService {
 
@@ -9,7 +9,7 @@ public interface AmountValidationService {
      *
      * @param requestedAmount
      */
-    public void validateLimits(int requestedAmount) throws InvalidRequestAmount ;
+    public void validateLimits(int requestedAmount) throws InvalidRequestAmount;
 
     public void validateMultiplier(int requestedAmount)  throws InvalidRequestAmount;
 

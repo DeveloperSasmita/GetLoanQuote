@@ -38,7 +38,7 @@ If run using JAR (Optional port)
 Property can be passed in the command line to override the configuration provided in
 the [configuration](src/main/resources/application.properties) 
 
-Application URL :` http://localhost:port/zopa-rate` (POST)                                                                                                                      
+Application URL :` http://localhost:port/getquote?loan_amount=1700` (GET)                                                                                                                      
 
 One argument input body : 1700                                                                                          
 Expected Response -                                                                          

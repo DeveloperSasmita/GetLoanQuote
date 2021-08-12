@@ -1,4 +1,4 @@
-package zopa.quote.model;
+package com.getquote.model;
 
 import lombok.Data;
 

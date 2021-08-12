@@ -1,7 +1,7 @@
-package zopa.quote.service;
+package com.getquote.service;
 
-import zopa.quote.exceptions.FundsNotAvailable;
-import zopa.quote.model.Quote;
+import com.getquote.exceptions.FundsNotAvailable;
+import com.getquote.model.Quote;
 
 import java.math.BigDecimal;
 import java.util.Optional;

@@ -1,16 +1,15 @@
-package zopa.quote;
+package com.getquote;
 
 
+import com.getquote.model.Offer;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
-import zopa.quote.model.Offer;
-import zopa.quote.util.CSVUtility;
+import com.getquote.util.CSVUtility;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 

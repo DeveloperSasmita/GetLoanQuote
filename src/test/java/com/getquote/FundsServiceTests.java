@@ -1,5 +1,6 @@
-package zopa.quote;
+package com.getquote;
 
+import com.getquote.model.Offer;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,9 +8,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import zopa.quote.exceptions.FundsNotAvailable;
-import zopa.quote.model.Offer;
-import zopa.quote.service.FundsService;
+import com.getquote.exceptions.FundsNotAvailable;
+import com.getquote.service.FundsService;
 
 
 @Slf4j

@@ -8,11 +8,11 @@
 		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>zopa</groupId>
-	<artifactId>quote</artifactId>
+	<groupId>com</groupId>
+	<artifactId>GetLoanQuote</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>GetZopaQuote</name>
-	<description>Generate Zopa Quote</description>
+	<name>GetLoanQuote</name>
+	<description>Generate Loan Quote</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

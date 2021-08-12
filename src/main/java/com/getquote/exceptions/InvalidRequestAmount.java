@@ -1,4 +1,4 @@
-package zopa.quote.exceptions;
+package com.getquote.exceptions;
 
 
 public class InvalidRequestAmount extends GenericException {

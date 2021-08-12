@@ -1,4 +1,4 @@
-package zopa.quote.util;
+package com.getquote.util;
 
 import com.opencsv.bean.ColumnPositionMappingStrategy;
 import com.opencsv.bean.CsvToBean;
