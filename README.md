@@ -1,4 +1,4 @@
-# ZOPA Quote Generator
+# Quote Generator
 
 ## Technology Stack Used
 
