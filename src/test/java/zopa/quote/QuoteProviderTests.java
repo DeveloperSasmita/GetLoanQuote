@@ -54,7 +54,7 @@ public class QuoteProviderTests {
         Quote quote = new Quote();
         quote.setAmount(1000);
         quote.setRate(loanQuoteCalculation.calculateLowestPossibleRate(quote.getAmount()));
-        Assertions.assertEquals(( loanQuoteCalculation.calculateMonthlyRepayment(quote)), new BigDecimal("1.11"));
+        Assertions.assertEquals(( loanQuoteCalculation.calculateMonthlyRepayment(quote)).setScale(2, BigDecimal.ROUND_UP), new BigDecimal("30.88"));
 
     }
 
@@ -64,8 +64,8 @@ public class QuoteProviderTests {
         String loan = "1700";
         Optional<Quote> quote = loanQuoteCalculation.getQuote(loan);
         Assertions.assertEquals(String.format("%.1f", quote.get().getRate() * 100), "7,2");
-        Assertions.assertEquals(String.format("%.2f", quote.get().getMonthlyRepayment()), "52,64");
-        Assertions.assertEquals(String.format("%.2f", quote.get().getTotalRepayment()), "1894,88");
+        Assertions.assertEquals( quote.get().getMonthlyRepayment().setScale(2, BigDecimal.ROUND_UP), new BigDecimal("52.64"));
+        Assertions.assertEquals( quote.get().getTotalRepayment().setScale(2, BigDecimal.ROUND_UP), new BigDecimal("1895.04"));
     }
 
 

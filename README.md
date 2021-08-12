@@ -34,13 +34,18 @@ Java : 11 , Junit5 , Springboot:2.5.3
 2. Sample LenderData.csv file is at src\test\resources\
 
 If run using JAR (Optional port)                                                        
-```  java -jar target/quote-0.0.1-SNAPSHOT.jar --server.port=8082
+```  java -jar target/quote-0.0.1-SNAPSHOT.jar --server.port=8080
  ```
 Property can be passed in the command line to override the configuration provided in
 the [configuration](src/main/resources/application.properties) 
 
 Application URL :` http://localhost:port/zopa-rate` (POST)
-One argument input (Example body : 1000)
+One argument input (Example body : 1700)
+Expected Response - 
+Requested amount: £1700
+Annual Interest Rate: £7,2%
+Monthly repayment: £52,64
+Total repayment: £1895,04
 
 
 ## Run Unit Tests

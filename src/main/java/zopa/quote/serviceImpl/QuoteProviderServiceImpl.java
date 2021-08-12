@@ -46,8 +46,8 @@ class QuoteProviderServiceImpl implements QuoteProviderService {
         Quote quote = new Quote();
         quote.setAmount(requestedAmt);
         quote.setRate(calculateLowestPossibleRate(requestedAmt));
-        quote.setMonthlyRepayment(calculateMonthlyRepayment(quote));
-        quote.setTotalRepayment(quote.getMonthlyRepayment().multiply(new BigDecimal(getTotalPaymentsMonths())) );
+        quote.setMonthlyRepayment(calculateMonthlyRepayment(quote).setScale(2, BigDecimal.ROUND_UP));
+        quote.setTotalRepayment(quote.getMonthlyRepayment().multiply(new BigDecimal(getTotalPaymentsMonths())).setScale(2, BigDecimal.ROUND_UP) );
 
         if (quote == null) {
             log.error("An error occurred while generating the quote");
@@ -89,7 +89,8 @@ class QuoteProviderServiceImpl implements QuoteProviderService {
     public BigDecimal calculateMonthlyRepayment(Quote quote) {
 
         //TODO Calculation
-        return (new BigDecimal(quote.getRate()).multiply(new BigDecimal(quote.getAmount())) .divide(new BigDecimal(12)).divide((BigDecimal.ONE.subtract (new BigDecimal(quote.getRate()).divide(new BigDecimal(12)).add(BigDecimal.ONE) ).pow (getTotalPaymentsMonths()))));
+        return new BigDecimal(quote.getRate() * quote.getAmount() / 12 / (1 - Math.pow((quote.getRate() / 12 + 1), (-getTotalPaymentsMonths()))));
+      //  return (new BigDecimal(quote.getRate()).multiply(new BigDecimal(quote.getAmount())) .divide(new BigDecimal(12)).divide((BigDecimal.ONE.subtract (new BigDecimal(quote.getRate()).divide(new BigDecimal(12)).add(BigDecimal.ONE) ).pow (getTotalPaymentsMonths()))));
 
     }
 
